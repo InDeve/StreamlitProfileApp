@@ -12,8 +12,9 @@ with col2:
     st.image("./assets/profile_placeholder.png", width=230)
 with col1:
     st.title("Calvin Y", anchor=False)
+    st.caption("ckyang02@gmail.com | https://www.linkedin.com/in/calvin-yang-7baa9427b/")
     st.write(
-        "Computer Science Major with a background in Machine Learning and Object Oriented Programming. I've enjoyed completing and adding \
+        "Computer Science Major with a background in IT, Machine Learning and Object Oriented Programming. \nI've enjoyed completing and adding \
             on to these fun web projects on the side. Check them out in the Projects section!"
     )
     if st.button("✉ Contact Me"):
