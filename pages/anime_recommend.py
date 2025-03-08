@@ -19,11 +19,11 @@ import os
 import pandas as pd
 
 
-''' DATA PROCESSING AND LOADING '''
+# ''' DATA PROCESSING AND LOADING '''
 
 @st.cache_data
 def load_data():
-    anime_df = pd.read_parquet("ml_models/anime_filtered_3mil.parquet")
+    anime_df = pd.read_parquet("ml_models/anime_filtered_2mil.parquet")
     # We drop duplicates so the data isn't redundant when selecting a point.
     anime_data_rating = anime_df.drop_duplicates(subset=['user_id','title'])
     # If the rating doesn't exist, fill it with 0 in the data pivot
@@ -47,7 +47,7 @@ def load_model():
 
 anime_data_pivot, anime_model = load_model()
 
-''' CORE FUNCTION '''
+# ''' CORE FUNCTION '''
 @st.cache_data
 # Get user show
 def get_recommendations(screen_input):
@@ -78,7 +78,7 @@ def get_recommendations(screen_input):
   except:
     return f'{user_input} could not be found'
 
-''' USER INTERFACE '''
+# ''' USER INTERFACE '''
 loading_msg.empty()
 
 anime = st.text_input("Enter an Anime:")
