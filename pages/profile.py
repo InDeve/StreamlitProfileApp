@@ -6,7 +6,7 @@ from forms.contact import contact_form
 def show_contact_form():
     contact_form()
 
-''' PROFILE TITLE AND DESCRIPTION '''
+# ''' PROFILE TITLE AND DESCRIPTION '''
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col2:
     st.image("./assets/profile_placeholder.png", width=230)
@@ -19,7 +19,7 @@ with col1:
     if st.button("✉ Contact Me"):
         show_contact_form()
 
-""" EXPERIENCE AND QUALIFICATIONS """
+# """ EXPERIENCE AND QUALIFICATIONS """
 st.write("\n")
 st.subheader("Experience and Skill-sets", anchor=False)
 
@@ -40,7 +40,7 @@ description="""
     """
 st.markdown(description, unsafe_allow_html=True)
 
-""" SKILLS """
+# """ SKILLS """
 st.write("\n")
 st.subheader("Technical Skills", anchor=False)
 st.write(
