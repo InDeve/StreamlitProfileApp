@@ -7,7 +7,7 @@ st.text("See an Anime recommendation based on users who like the same show as yo
 st.text("""
   Wonder how this works? I'm using a KNN algorithm to find users that have rated your show highly and gauging that with other shows they have rated highly. Using purely numerical data, we can find interesting recommendations, who knows how accurate, without user input. 
         """)
-st.caption("_dataset based on_: https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset?resource=download ")
+st.caption("This example page only uses 1million rows of the data. _dataset based on_: https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset?resource=download ")
 
 loading_msg = st.empty()
 loading_msg.info("Loading Model...")
