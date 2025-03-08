@@ -2,38 +2,38 @@ import streamlit as st
 
 # ''' Page setup '''
 profile = st.Page(
-    page="pages/profile.py",
+    page="menus/profile.py",
     title="About Me",
     icon=":material/account_circle:",
     default=True,
 )
 
 city_classificaiton_page = st.Page(
-    page="pages/city_model.py",
+    page="menus/city_model.py",
     title="City Classification",
     icon=":material/location_city:",
 )
 
 echo_bot_page = st.Page(
-    page="pages/chatbot.py",
+    page="menus/chatbot.py",
     title="Echo Bot",
     icon=":material/smart_toy:",
 )
 
 anime_recommend_page = st.Page(
-    page="pages/anime_recommend.py",
+    page="menus/anime_recommend.py",
     title="Anime Recommendation",
     icon=":material/comic_bubble:",
 )
 
 toxic_check_page = st.Page(
-    page="pages/toxicity_model.py",
+    page="menus/toxicity_model.py",
     title="Toxic Comment Check",
     icon=":material/fact_check:"
 )
 
 # ''' NAVIGATION SETUP (No sections) '''
-# pg = st.navigation(pages=[profile, project_1_page, project_2_page])
+# pg = st.navigation(menus=[profile, project_1_page, project_2_page])
 
 # ''' Navigation with Sections '''
 pg = st.navigation(
@@ -43,7 +43,7 @@ pg = st.navigation(
     }
 )
 
-# ''' SHARED ON ALL PAGES '''
+# ''' SHARED ON ALL menus '''
 st.logo("assets/heart.png")
 st.sidebar.text("Made by Test Dev | Base dashboard from Sven @CodingIsFun")
 
