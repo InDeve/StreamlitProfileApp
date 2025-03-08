@@ -22,7 +22,7 @@ import pandas as pd
 @st.cache_data
 def load_data():
     df = pd.read_parquet("ml_models/anime_filtered_10mil.parquet")
-    anime_df = df.head(3_000_000)
+    anime_df = df.head(1_000_000)
     # We drop duplicates so the data isn't redundant when selecting a point.
     anime_data_rating = anime_df.drop_duplicates(subset=['user_id','title'])
     # If the rating doesn't exist, fill it with 0 in the data pivot
@@ -37,7 +37,7 @@ anime_df, anime_data_matrix, anime_data_rating = load_data()
 @st.cache_resource
 def load_model():
     # Fit the model with KNN
-    anime_model = NearestNeighbors(metric='euclidean', algorithm='brute_force')
+    anime_model = NearestNeighbors(metric='euclidean', algorithm='brute')
     anime_model.fit(anime_data_matrix)
     # If the rating doesn't exist, fill it with 0 in the data pivot
     anime_data_pivot = anime_data_rating.pivot_table(index=['title'],
