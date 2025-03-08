@@ -21,7 +21,7 @@ import pandas as pd
 
 @st.cache_data
 def load_data():
-    df = pd.read_parquet("ml_models/anime_filtered_10mil.parquet")
+    df = pd.read_parquet("ml_models/anime_filtered_1mil.parquet")
     anime_df = df.head(1_000_000)
     # We drop duplicates so the data isn't redundant when selecting a point.
     anime_data_rating = anime_df.drop_duplicates(subset=['user_id','title'])
