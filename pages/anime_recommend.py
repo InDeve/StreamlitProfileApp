@@ -19,6 +19,8 @@ import os
 import pandas as pd
 
 
+''' DATA PROCESSING AND LOADING '''
+
 @st.cache_data
 def load_data():
     anime_df = pd.read_parquet("ml_models/anime_filtered_3mil.parquet")
@@ -45,6 +47,7 @@ def load_model():
 
 anime_data_pivot, anime_model = load_model()
 
+''' CORE FUNCTION '''
 @st.cache_data
 # Get user show
 def get_recommendations(screen_input):
@@ -74,7 +77,8 @@ def get_recommendations(screen_input):
       return text
   except:
     return f'{user_input} could not be found'
-  
+
+''' USER INTERFACE '''
 loading_msg.empty()
 
 anime = st.text_input("Enter an Anime:")

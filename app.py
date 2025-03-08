@@ -45,7 +45,7 @@ pg = st.navigation(
 
 # ''' SHARED ON ALL pages '''
 st.logo("assets/heart.png")
-st.sidebar.text("Made by Test Dev | Base dashboard from Sven @CodingIsFun")
+st.sidebar.text("Adapted by Calvin Y | Base dashboard from Sven: @CodingIsFun")
 
 # ''' RUN NAVIGATION '''
 pg.run()
