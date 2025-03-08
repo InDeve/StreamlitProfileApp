@@ -3,7 +3,7 @@ import streamlit as st
 st.title("City Classification")
 st.text("A Machine learning model trained on images of cities and towns.\n"
         "Upload an image of either one, and this app will try to identify it.")
-st.image("assets/architecture-buildings-city-373893.jpg")
+st.image("assets/buildings-647400_640.jpg")
 
 # ''' lOADING MESSAGE '''
 loading_msg = st.empty()
