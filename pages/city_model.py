@@ -5,7 +5,7 @@ st.text("A Machine learning model trained on images of cities and towns.\n"
         "Upload an image of either one, and this app will try to identify it.")
 st.image("assets/architecture-buildings-city-373893.jpg")
 
-''' lOADING MESSAGE '''
+# ''' lOADING MESSAGE '''
 loading_msg = st.empty()
 loading_msg.info("Loading Model...")
 
@@ -18,14 +18,14 @@ import matplotlib.pyplot as plt
 
 import cv2 # Used for computer vision
 
-''' MODEL LOADING '''
+# ''' MODEL LOADING '''
 @st.cache_resource
 def loadModel():
    model = load_model("ml_models\CityTownClassifier.keras", compile=False)
    return model
 
 
-''' CORE FUNCTION '''
+# ''' CORE FUNCTION '''
 @st.cache_data
 def Classify(image):
   '''
@@ -56,7 +56,7 @@ def Classify(image):
   plt.imshow(cv2.cvtColor(img_cv2, cv2.COLOR_BGR2RGB))
   st.pyplot(plt)
 
-''' USER INTERFACE '''
+# ''' USER INTERFACE '''
 loading_msg.empty()
 
 upload_image = st.file_uploader("Upload an image: ", type=['jpeg','jpg','bmp', 'png'])
