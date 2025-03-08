@@ -21,7 +21,7 @@ import cv2 # Used for computer vision
 # ''' MODEL LOADING '''
 @st.cache_resource
 def loadModel():
-   model = load_model("ml_models\CityTownClassifier.keras", compile=False)
+   model = load_model("ml_models/CityTownClassifier.keras", compile=False)
    return model
 
 
