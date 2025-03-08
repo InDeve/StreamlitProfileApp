@@ -37,7 +37,7 @@ anime_df, anime_data_matrix, anime_data_rating = load_data()
 @st.cache_resource
 def load_model():
     # Fit the model with KNN
-    anime_model = NearestNeighbors(metric='euclidean', algorithm='ball_tree')
+    anime_model = NearestNeighbors(metric='euclidean', algorithm='brute_force')
     anime_model.fit(anime_data_matrix)
     # If the rating doesn't exist, fill it with 0 in the data pivot
     anime_data_pivot = anime_data_rating.pivot_table(index=['title'],
