@@ -6,3 +6,4 @@ scipy
 matplotlib
 scikit-learn
 opencv-python
+st_social_media_links

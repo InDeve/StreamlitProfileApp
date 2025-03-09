@@ -1,10 +1,15 @@
 import streamlit as st
 
 from forms.contact import contact_form
+from st_social_media_links import SocialMediaIcons
 
 @st.dialog("Contact Me")
 def show_contact_form():
     contact_form()
+
+# ''' SOCIAL MEDIA LINKS '''
+links = [" https://www.linkedin.com/in/calvin-yang-7baa9427b/",]
+icons = SocialMediaIcons(links)
 
 # ''' PROFILE TITLE AND DESCRIPTION '''
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
@@ -12,13 +17,17 @@ with col2:
     st.image("./assets/profile_placeholder.png", width=230)
 with col1:
     st.title("Calvin Y", anchor=False)
-    st.caption("ckyang02@gmail.com | https://www.linkedin.com/in/calvin-yang-7baa9427b/")
+    info = st.container()
+    info.write("ckyang02@gmail.com")
+    with info:
+        icons.render(sidebar=False, justify_content="left")
     st.write(
         "Computer Science Major with a background in IT, Machine Learning and Object Oriented Programming. \nI've enjoyed completing and adding \
             on to these fun web projects on the side. Check them out in the Projects section!"
     )
     if st.button("✉ Contact Me"):
         show_contact_form()
+
 
 # """ EXPERIENCE AND QUALIFICATIONS """
 st.write("\n")
