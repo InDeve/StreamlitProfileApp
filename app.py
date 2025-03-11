@@ -1,6 +1,6 @@
 import streamlit as st
 
-# ''' Page setup '''
+# ''' Page setup ''''
 profile = st.Page(
     page="pages/profile.py",
     title="About Me",
